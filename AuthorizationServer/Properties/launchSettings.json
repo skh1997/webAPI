@@ -1,0 +1,17 @@
+{
+  "profiles": {
+    "AuthorizationServer": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "http://localhost:5000",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "AuthorizationServer:ServerBase": "http://localhost:5000",
+        "AuthorizationServer:SigningCredentialCertificatePath": "D:\\Projects\\dotnet\\Boilerplate\\Certificates\\mlhsales.pfx",
+        "AuthorizationServer:SigningCredentialCertificatePassword": "Bx@steel",
+        "SalesApi:ServerBase": "http://localhost:5100",
+        "SalesApi:ClientBase": "http://localhost:4200"
+      }
+    }
+  }
+}

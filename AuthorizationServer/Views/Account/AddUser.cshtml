@@ -1,0 +1,34 @@
+﻿@using AuthorizationServer.Models.AccountViewModels
+@model AuthorizationServer.ViewModels.AddUserViewModel
+@{
+    ViewData["Title"] = "Add User";
+}
+
+<h2>@ViewData["Title"]</h2>
+@if (ViewData["SuccessfulMsg"] != null)
+{
+    <div class="alert alert-success" role="alert">@ViewData["SuccessfulMsg"]</div>
+}
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <h4>Create new user.</h4>
+            <hr />
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="UserName"></label>
+                <input asp-for="UserName" class="form-control" />
+                <span asp-validation-for="UserName" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-default">Save</button>
+        </form>
+        <br />
+        <p>
+            <a asp-action="Users"><span class="glyphicon glyphicon-circle-arrow-left" aria-hidden="true"></span> Back to user management page</a>
+        </p>
+    </div>
+</div>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}

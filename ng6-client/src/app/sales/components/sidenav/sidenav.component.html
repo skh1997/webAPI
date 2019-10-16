@@ -1,0 +1,21 @@
+<mat-drawer-container class="sidenav-container" autosize>
+  <mat-drawer #drawer class="app-sidenav mat-elevation-z10" [mode]="isScreenSmall() ? 'over' : 'side'" [opened]="!isScreenSmall()">
+    <mat-toolbar color="primary">
+      Sales Examples
+    </mat-toolbar>
+    <mat-nav-list>
+      <mat-list-item>
+        <mat-icon><i class="material-icons">local_grocery_store</i></mat-icon>
+        <a matLine [routerLink]="['/sales/product']">Product</a>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-drawer>
+
+  <div class="sidenav-content">
+    <app-toolbar (toggleSidenav)="drawer.toggle()" class="mat-elevation-z5"></app-toolbar>
+    <div class="wrapper">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+
+</mat-drawer-container>

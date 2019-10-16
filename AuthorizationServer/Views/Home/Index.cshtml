@@ -1,0 +1,16 @@
+﻿@using AuthorizationServer
+@{
+    ViewData["Title"] = "Home";
+}
+<div class="row" style="margin-top: 25px;">
+    <div class="col-xs-6 col-md-3">
+        <div class="panel panel-info">
+            <div class="panel-heading">Sales Client</div>
+            <div class="panel-body" style="padding-bottom: 0;">
+                <a href="@Startup.Configuration["SalesApi:ClientBase"]" class="thumbnail">
+                    <img src="images/sales.jpg" alt="Sales Client" style="width: 220px; height: 220px;">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
